@@ -1,16 +1,12 @@
 <?php
 
-
 namespace JakubSzczesniak\LaravelEloquentStateMachines\StateMachines;
-
 
 use JakubSzczesniak\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
 use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
 use JakubSzczesniak\LaravelEloquentStateMachines\Models\StateHistory;
 use Carbon\Carbon;
 use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Validation\ValidationException;
 
@@ -96,6 +92,14 @@ abstract class StateMachine
      */
     public function transitionTo($from, $to, $customProperties = [], $responsible = null)
     {
+        if ($from instanceof \UnitEnum) {
+            $from = $from->value ?? $from->name;
+        }
+
+        if ($to instanceof \UnitEnum) {
+            $to = $to->value ?? $to->name;
+        }
+
         if ($to === $this->currentState()) {
             return;
         }

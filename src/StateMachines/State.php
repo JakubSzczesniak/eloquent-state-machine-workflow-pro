@@ -1,6 +1,5 @@
 <?php
 
-
 namespace JakubSzczesniak\LaravelEloquentStateMachines\StateMachines;
 
 use JakubSzczesniak\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
