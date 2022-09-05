@@ -1,8 +1,6 @@
 <?php
 
-
-namespace Asantibanez\LaravelEloquentStateMachines\Exceptions;
-
+namespace JakubSzczesniak\LaravelEloquentStateMachines\Exceptions;
 
 use Exception;
 

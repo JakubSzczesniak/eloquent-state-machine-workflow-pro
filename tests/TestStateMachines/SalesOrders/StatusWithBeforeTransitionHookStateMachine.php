@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Asantibanez\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders;
+namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders;
 
 
-use Asantibanez\LaravelEloquentStateMachines\StateMachines\StateMachine;
-use Asantibanez\LaravelEloquentStateMachines\Tests\TestJobs\BeforeTransitionJob;
+use JakubSzczesniak\LaravelEloquentStateMachines\StateMachines\StateMachine;
+use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestJobs\BeforeTransitionJob;
 
 class StatusWithBeforeTransitionHookStateMachine extends StateMachine
 {

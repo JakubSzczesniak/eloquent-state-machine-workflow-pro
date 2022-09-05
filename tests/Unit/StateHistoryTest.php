@@ -1,9 +1,9 @@
 <?php
 
-namespace Asantibanez\LaravelEloquentStateMachines\Tests\Unit;
+namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\Unit;
 
-use Asantibanez\LaravelEloquentStateMachines\Models\StateHistory;
-use Asantibanez\LaravelEloquentStateMachines\Tests\TestCase;
+use JakubSzczesniak\LaravelEloquentStateMachines\Models\StateHistory;
+use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 

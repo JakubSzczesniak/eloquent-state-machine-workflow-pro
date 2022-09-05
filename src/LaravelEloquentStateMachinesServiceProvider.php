@@ -1,8 +1,8 @@
 <?php
 
-namespace Asantibanez\LaravelEloquentStateMachines;
+namespace JakubSzczesniak\LaravelEloquentStateMachines;
 
-use Asantibanez\LaravelEloquentStateMachines\Commands\MakeStateMachine;
+use JakubSzczesniak\LaravelEloquentStateMachines\Commands\MakeStateMachine;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelEloquentStateMachinesServiceProvider extends ServiceProvider

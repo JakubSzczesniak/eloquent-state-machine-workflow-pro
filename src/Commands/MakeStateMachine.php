@@ -1,8 +1,6 @@
 <?php
 
-
-namespace Asantibanez\LaravelEloquentStateMachines\Commands;
-
+namespace JakubSzczesniak\LaravelEloquentStateMachines\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 

@@ -89,7 +89,7 @@ composer require asantibanez/laravel-eloquent-state-machines
 Next, you must export the package migrations
 
 ```bash
-php artisan vendor:publish --provider="Asantibanez\LaravelEloquentStateMachines\LaravelEloquentStateMachinesServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="JakubSzczesniak\LaravelEloquentStateMachines\LaravelEloquentStateMachinesServiceProvider" --tag="migrations"
 ```
 
 
@@ -113,7 +113,7 @@ After running the command, we will have a new StateMachine class created
 in the `App\StateMachines` directory. The class will have the following code.
 
 ```php
-use Asantibanez\LaravelEloquentStateMachines\StateMachines\StateMachine;
+use JakubSzczesniak\LaravelEloquentStateMachines\StateMachines\StateMachine;
 
 class StatusStateMachine extends StateMachine
 {
@@ -173,7 +173,7 @@ Once we have defined our StateMachine, we can register it in our `SalesOrder` mo
 attribute. Here, we set the bound model `field` and state machine class that will control it.  
 
 ```php
-use Asantibanez\LaravelEloquentStateMachines\Traits\HasStateMachines;
+use JakubSzczesniak\LaravelEloquentStateMachines\Traits\HasStateMachines;
 use App\StateMachines\StatusStateMachine;
 
 class SalesOrder extends Model 

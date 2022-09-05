@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Asantibanez\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders;
+namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders;
 
 
-use Asantibanez\LaravelEloquentStateMachines\StateMachines\StateMachine;
+use JakubSzczesniak\LaravelEloquentStateMachines\StateMachines\StateMachine;
 
 class StatusStateMachine extends StateMachine
 {

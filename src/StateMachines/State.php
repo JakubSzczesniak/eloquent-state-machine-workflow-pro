@@ -1,16 +1,16 @@
 <?php
 
 
-namespace Asantibanez\LaravelEloquentStateMachines\StateMachines;
+namespace JakubSzczesniak\LaravelEloquentStateMachines\StateMachines;
 
-use Asantibanez\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
-use Asantibanez\LaravelEloquentStateMachines\Models\PendingTransition;
-use Asantibanez\LaravelEloquentStateMachines\Models\StateHistory;
+use JakubSzczesniak\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
+use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
+use JakubSzczesniak\LaravelEloquentStateMachines\Models\StateHistory;
 use Carbon\Carbon;
 
 /**
  * Class State
- * @package Asantibanez\LaravelEloquentStateMachines\StateMachines
+ * @package JakubSzczesniak\LaravelEloquentStateMachines\StateMachines
  * @property string $state
  * @property StateMachine $stateMachine
  */

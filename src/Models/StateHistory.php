@@ -1,13 +1,13 @@
 <?php
 
-namespace Asantibanez\LaravelEloquentStateMachines\Models;
+namespace JakubSzczesniak\LaravelEloquentStateMachines\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class StateHistory
- * @package Asantibanez\LaravelEloquentStateMachines\Models
+ * @package JakubSzczesniak\LaravelEloquentStateMachines\Models
  * @property string $field
  * @property string $from
  * @property string $to

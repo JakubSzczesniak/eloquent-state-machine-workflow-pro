@@ -1,11 +1,11 @@
 <?php
 
-namespace Asantibanez\LaravelEloquentStateMachines\Tests\Feature;
+namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\Feature;
 
-use Asantibanez\LaravelEloquentStateMachines\Jobs\PendingTransitionExecutor;
-use Asantibanez\LaravelEloquentStateMachines\Tests\TestCase;
-use Asantibanez\LaravelEloquentStateMachines\Tests\TestModels\SalesManager;
-use Asantibanez\LaravelEloquentStateMachines\Tests\TestModels\SalesOrder;
+use JakubSzczesniak\LaravelEloquentStateMachines\Jobs\PendingTransitionExecutor;
+use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestCase;
+use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels\SalesManager;
+use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels\SalesOrder;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
