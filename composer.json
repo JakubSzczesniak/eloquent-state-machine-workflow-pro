@@ -1,17 +1,18 @@
 {
-    "name": "asantibanez/laravel-eloquent-state-machines",
+    "name": "jakubszczesniak/laravel-eloquent-state-machines",
     "description": "State machines for your Laravel Eloquent models",
     "keywords": [
-        "asantibanez",
-        "laravel-eloquent-state-machines"
+        "jakubszczesniak",
+        "laravel-eloquent-state-machines",
+        "state-machine"
     ],
     "homepage": "https://github.com/asantibanez/laravel-eloquent-state-machines",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Andrés Santibáñez",
-            "email": "santibanez.andres@gmail.com",
+            "name": "Jakub Szcześniak",
+            "email": "jakub.szczesniak@protonmail.com",
             "role": "Developer"
         }
     ],

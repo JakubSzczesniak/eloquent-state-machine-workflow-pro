@@ -83,7 +83,7 @@ You can check a demo and examples [here](https://github.com/asantibanez/laravel-
 You can install the package via composer:
 
 ```bash
-composer require asantibanez/laravel-eloquent-state-machines
+composer require jakubszczesniak/laravel-eloquent-state-machines
 ```
 
 Next, you must export the package migrations
