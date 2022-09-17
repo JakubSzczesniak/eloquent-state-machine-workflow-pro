@@ -1,15 +1,15 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\Feature;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\Feature;
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestCase;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestJobs\StartSalesOrderFulfillmentJob;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels\SalesManager;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels\SalesOrder;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders\FulfillmentStateMachine;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders\StatusStateMachine;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Exceptions\TransitionNotAllowedException;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\PendingTransition;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestCase;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestJobs\StartSalesOrderFulfillmentJob;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestModels\SalesManager;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestModels\SalesOrder;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestStateMachines\SalesOrders\FulfillmentStateMachine;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestStateMachines\SalesOrders\StatusStateMachine;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;

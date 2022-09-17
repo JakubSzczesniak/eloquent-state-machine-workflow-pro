@@ -1,15 +1,15 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\StateMachines;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\StateMachines;
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\StateHistory;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Exceptions\TransitionNotAllowedException;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\PendingTransition;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\StateHistory;
 use Carbon\Carbon;
 
 /**
  * Class State
- * @package JakubSzczesniak\LaravelEloquentStateMachines\StateMachines
+ * @package JakubSzczesniak\EloquentStateMachineWorkflowPro\StateMachines
  * @property string $state
  * @property StateMachine $stateMachine
  */

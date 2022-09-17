@@ -1,6 +1,6 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestModels;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableAlias;

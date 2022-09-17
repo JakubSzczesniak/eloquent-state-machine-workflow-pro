@@ -1,11 +1,11 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\StateMachines;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\StateMachines;
 
 use BackedEnum;
-use JakubSzczesniak\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\StateHistory;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Exceptions\TransitionNotAllowedException;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\PendingTransition;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\StateHistory;
 use Carbon\Carbon;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Collection;

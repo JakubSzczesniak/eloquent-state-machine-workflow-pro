@@ -1,13 +1,13 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Models;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class PendingTransition
- * @package JakubSzczesniak\LaravelEloquentStateMachines\Models
+ * @package JakubSzczesniak\EloquentStateMachineWorkflowPro\Models
  * @property string $field
  * @property string $from
  * @property string $to

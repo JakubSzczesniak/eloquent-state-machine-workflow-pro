@@ -1,11 +1,11 @@
 <?php
 
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestStateMachines\SalesOrders;
 
 
-use JakubSzczesniak\LaravelEloquentStateMachines\StateMachines\StateMachine;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestJobs\StartSalesOrderFulfillmentJob;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\StateMachines\StateMachine;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestJobs\StartSalesOrderFulfillmentJob;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Facades\Validator as ValidatorFacade;
 use Illuminate\Validation\Rule;

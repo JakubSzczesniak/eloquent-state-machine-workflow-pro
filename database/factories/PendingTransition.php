@@ -1,6 +1,6 @@
 <?php
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\PendingTransition;
 use Carbon\Carbon;
 use Faker\Generator as Faker;
 

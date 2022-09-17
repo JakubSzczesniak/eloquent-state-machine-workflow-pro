@@ -2,7 +2,7 @@
 
 namespace JakubSzczesniak\LaravelEloquentStateMachines;
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Commands\MakeStateMachine;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Commands\MakeStateMachine;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelEloquentStateMachinesServiceProvider extends ServiceProvider

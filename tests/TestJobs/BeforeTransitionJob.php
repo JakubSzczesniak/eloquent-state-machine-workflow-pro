@@ -1,7 +1,7 @@
 <?php
 
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestJobs;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestJobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

@@ -1,10 +1,10 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\Feature;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\Feature;
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\StateHistory;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestCase;
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels\SalesOrder;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\StateHistory;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestCase;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestModels\SalesOrder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 

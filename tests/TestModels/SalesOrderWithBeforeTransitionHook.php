@@ -1,9 +1,9 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestModels;
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestStateMachines\SalesOrders\StatusWithBeforeTransitionHookStateMachine;
-use JakubSzczesniak\LaravelEloquentStateMachines\Traits\HasStateMachines;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestStateMachines\SalesOrders\StatusWithBeforeTransitionHookStateMachine;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Traits\HasStateMachines;
 use Illuminate\Database\Eloquent\Model;
 
 class SalesOrderWithBeforeTransitionHook extends Model

@@ -1,6 +1,6 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Exceptions;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Exceptions;
 
 use Exception;
 

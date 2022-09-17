@@ -1,6 +1,6 @@
 <?php
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Tests\TestModels\SalesManager;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Tests\TestModels\SalesManager;
 use Faker\Generator as Faker;
 
 $factory->define(SalesManager::class, function (Faker $faker) {

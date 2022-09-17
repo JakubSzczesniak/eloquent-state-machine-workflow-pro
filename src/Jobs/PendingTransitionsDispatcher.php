@@ -1,10 +1,10 @@
 <?php
 
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines\Jobs;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro\Jobs;
 
 
-use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
+use JakubSzczesniak\EloquentStateMachineWorkflowPro\Models\PendingTransition;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
