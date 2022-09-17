@@ -1,5 +1,5 @@
 ## Introduction
-I forked code from `Asantibanez` and optimized to resolve eager loading (n + 1) problem and allows to provide enums as state value.
+I forked the code from `Asantibanez` and optimized to resolve eager loading (n + 1) problem and allow to provide enums as state value.
 
 **Examples**
 
