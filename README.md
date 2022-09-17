@@ -1,9 +1,24 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/asantibanez/laravel-eloquent-state-machines.svg?style=flat-square)](https://packagist.org/packages/asantibanez/laravel-eloquent-state-machines)
-[![Total Downloads](https://img.shields.io/packagist/dt/asantibanez/laravel-eloquent-state-machines.svg?style=flat-square)](https://packagist.org/packages/asantibanez/laravel-eloquent-state-machines)
-
-![Laravel Eloquent State Machines](https://banners.beyondco.de/Laravel%20Eloquent%20State%20Machines.png?theme=light&packageManager=composer+require&packageName=asantibanez%2Flaravel-eloquent-state-machines&pattern=circuitBoard&style=style_1&description=State+machines+for+your+Laravel+Eloquent+models+in+no+time&md=1&showWatermark=1&fontSize=100px&images=collection)
-
 ## Introduction
+I forked code from `Asantibanez` and optimized to resolve eager loading (n + 1) problem and allows to provide enums as state value.
+
+**Examples**
+
+Optimized stateHistory query with specific field:
+```php
+DB::connection()->enableQueryLog();
+
+$bookings = Booking::with(['stateHistory' => fn($q) => $q->where('field', '=', 'status')])->paginate();
+
+return BookingResource::collection($bookings)->additional([DB::getQueryLog()]);
+```
+
+Change status with enums:
+```php
+ $booking->status()->transitionTo(Status::CANCELED, [
+    'reason' => $request->input('reason')
+ ]);
+```
+**Here is documentation from forked repository:**
 
 This package allows you to simplify the transitioning of states an Eloquent model could have by
 defining the transition logic in specific StateMachine classes. Each class allows you to register

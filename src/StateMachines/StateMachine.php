@@ -2,6 +2,7 @@
 
 namespace JakubSzczesniak\LaravelEloquentStateMachines\StateMachines;
 
+use BackedEnum;
 use JakubSzczesniak\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
 use JakubSzczesniak\LaravelEloquentStateMachines\Models\PendingTransition;
 use JakubSzczesniak\LaravelEloquentStateMachines\Models\StateHistory;
@@ -29,23 +30,29 @@ abstract class StateMachine
         return $this->model->$field;
     }
 
-    public function history()
+    public function history(): Collection
     {
-        return $this->model->stateHistory()->forField($this->field);
+        return $this->model->stateHistory->where('field', $this->field);
     }
 
     public function was($state)
     {
-        return $this->history()->to($state)->exists();
+        $state = $this->castBinding($state);
+
+        return $this->history()->contains('to', $state);
     }
 
     public function timesWas($state)
     {
-        return $this->history()->to($state)->count();
+        $state = $this->castBinding($state);
+
+        return $this->history()->where('to', $state)->count();
     }
 
     public function whenWas($state) : ?Carbon
     {
+        $state = $this->castBinding($state);
+
         $stateHistory = $this->snapshotWhen($state);
 
         if ($stateHistory === null) {
@@ -57,16 +64,23 @@ abstract class StateMachine
 
     public function snapshotWhen($state) : ?StateHistory
     {
-        return $this->history()->to($state)->latest('id')->first();
+        $state = $this->castBinding($state);
+
+        return $this->history()->where('to', $state)->sortBy('id')->last();
     }
 
     public function snapshotsWhen($state) : Collection
     {
-        return $this->history()->to($state)->get();
+        $state = $this->castBinding($state);
+
+        return $this->history()->where('to', $state);
     }
 
     public function canBe($from, $to)
     {
+        $from = $this->castBinding($from);
+        $to = $this->castBinding($to);
+
         $availableTransitions = $this->transitions()[$from] ?? [];
 
         return collect($availableTransitions)->contains($to);
@@ -74,7 +88,7 @@ abstract class StateMachine
 
     public function pendingTransitions()
     {
-        return $this->model->pendingTransitions()->forField($this->field);
+        return $this->model->pendingTransitions()->where('field', $this->field);
     }
 
     public function hasPendingTransitions()
@@ -92,13 +106,8 @@ abstract class StateMachine
      */
     public function transitionTo($from, $to, $customProperties = [], $responsible = null)
     {
-        if ($from instanceof \UnitEnum) {
-            $from = $from->value ?? $from->name;
-        }
-
-        if ($to instanceof \UnitEnum) {
-            $to = $to->value ?? $to->name;
-        }
+        $from = $this->castBinding($from);
+        $to = $this->castBinding($to);
 
         if ($to === $this->currentState()) {
             return;
@@ -154,6 +163,9 @@ abstract class StateMachine
      */
     public function postponeTransitionTo($from, $to, Carbon $when, $customProperties = [], $responsible = null) : ?PendingTransition
     {
+        $from = $this->castBinding($from);
+        $to = $this->castBinding($to);
+
         if ($to === $this->currentState()) {
             return null;
         }
@@ -197,5 +209,14 @@ abstract class StateMachine
 
     public function beforeTransitionHooks() : array {
         return [];
+    }
+
+    private function castBinding($value)
+    {
+        if (function_exists('enum_exists') && $value instanceof BackedEnum) {
+            return $value->value;
+        }
+
+        return $value;
     }
 }

@@ -34,7 +34,7 @@ class SavesChangedAttributesInStateHistoryTest extends TestCase
         $salesOrder->refresh();
 
         /** @var StateHistory $lastStateTransition */
-        $lastStateTransition = $salesOrder->status()->history()->get()->last();
+        $lastStateTransition = $salesOrder->status()->history()->last();
 
         $this->assertContains('notes', $lastStateTransition->changedAttributesNames());
         $this->assertContains('total', $lastStateTransition->changedAttributesNames());
