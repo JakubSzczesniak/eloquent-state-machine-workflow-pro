@@ -1,6 +1,6 @@
 <?php
 
-namespace JakubSzczesniak\LaravelEloquentStateMachines;
+namespace JakubSzczesniak\EloquentStateMachineWorkflowPro;
 
 use JakubSzczesniak\EloquentStateMachineWorkflowPro\Commands\MakeStateMachine;
 use Illuminate\Support\ServiceProvider;
