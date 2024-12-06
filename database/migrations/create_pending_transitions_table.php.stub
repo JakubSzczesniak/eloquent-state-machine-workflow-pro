@@ -9,7 +9,7 @@ class CreatePendingTransitionsTable extends Migration
     public function up()
     {
         Schema::create('pending_transitions', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
 
             $table->morphs('model');
             $table->string('field');
