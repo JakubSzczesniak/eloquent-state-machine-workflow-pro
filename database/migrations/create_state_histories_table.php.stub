@@ -14,7 +14,7 @@ class CreateStateHistoriesTable extends Migration
     public function up()
     {
         Schema::create('state_histories', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
 
             $table->morphs('model');
             $table->string('field');
